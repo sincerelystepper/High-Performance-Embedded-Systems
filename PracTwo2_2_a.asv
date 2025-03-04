@@ -1,0 +1,15 @@
+
+% part 2.2 a)
+
+x = randi([0 1], 100); % generate random floats between 0 and 1 in a 100x100 matrix
+
+[rows, cols] = size(x); % sets the numbers of rows and columns
+
+% bubble sorting 
+
+for c=1: cols % iterate through each column
+    for i=1: rows-1 % iterate through each element
+        for j=1:rows-i % compare adjacent elements
+            if x(j,c) > x(j+1,c) % swap if out of order 
+                temp = x(j,c);
+                x(j)
